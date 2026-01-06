@@ -7,7 +7,7 @@ export const Button = ({
 
   const variantClasses = {
     primary: "bg-primary text-primary-foreground",
-    secondary: "bg-transparent text-muted ",
+    secondary: "bg-white text-muted ",
   };
 
 
