@@ -1,30 +1,73 @@
-# Dashdoor_Website_Clone
-A front-end clone of the DoorDash food delivery website, built for learning modern web development concepts and UI/UX patterns inspired by real-world delivery platforms.
+# React + TypeScript + Vite
 
-## 1. Project overview
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-**Goal:** Recreate the core landing pages and key flows of a food delivery website:
-- **Home page:** Hero section, search bar, featured restaurants.
-- **Restaurant listing:** Cards, filtering, and responsive grid layout.
-- **Restaurant detail:** Menu items, cart section, and call-to-action.
-- **Responsive layout:** Mobile-first design with tablet/desktop breakpoints.
-- **Reference Link: [DoorDash](https://www.doordash.com/?srsltid=AfmBOoopQ_aSLq4B6mlrp2q4jqGB6b04HwoKsjIDKpAsVH-CN26dwyo4)
+Currently, two official plugins are available:
 
-You can use this project to:
-- Practice **HTML/CSS/JavaScript** (or React/Vue/etc. if you’re using a framework).
-- Learn layout techniques (Flexbox, CSS Grid, responsive design).
-- Explore component-based UI thinking.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
----
+## React Compiler
 
-## 2. Tech stack
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-Update this section to match your actual stack.
+## Expanding the ESLint configuration
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Framework (optional):** React + Vite
-- **Styling:** Tailwind CSS / SCSS / plain CSS
-- **Package manager:** npm / yarn / pnpm
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
----
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
+
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```

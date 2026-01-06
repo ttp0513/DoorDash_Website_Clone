@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* Define theme colors */
+@theme {
+
+  --color-primary: #eb1700;
+  --color-primary-dark: #d52816;
+  --color-primary-foreground: #ffffff;
+
+
+  --color-headline: #151c2e;
+  --color-muted: #8f9eb1;
+
+  --color-border: #14110f;
+  --radius: 0.75rem;
+
+}
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Roboto", sans-serif;
+  }
+
+}
