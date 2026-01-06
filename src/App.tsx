@@ -2,6 +2,7 @@
 import { Navbar } from "./layout/Navbar";
 import { Hero } from "./sections/Hero";
 import { Foot } from "./sections/Foot";
+import { Body } from "./sections/Body";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <Navbar />
     <main>
       <Hero />
+      <Body />
       <Foot />
     </main>
     </div>
