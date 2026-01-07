@@ -7,9 +7,8 @@ export const Button = ({
 
   const variantClasses = {
     primary: "bg-primary text-primary-foreground hover:bg-primary-dark",
-    secondary: "bg-white text-muted hover:bg-white",
-    hero: "bg-transparent text-primary hover:bg-transparent",
-    body: "bg-primary text-primary-foreground hover:bg-primary-dark"
+    secondary: "bg-white text-muted",
+    hero: "bg-transparent text-primary"
   };
 
   const classes = `

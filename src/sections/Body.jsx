@@ -12,7 +12,7 @@ export const Body = () => {
                     cta="Shop beauty" 
                     fontSize="lg"
                     link="https://www.doordash.com/p/beauty-supply"
-                    variant="body">
+                    >
                 </Card> 
                 <div>
                     <img src="https://img.cdn4dd.com/cdn-cgi/image/fit=cover,format=auto,quality=60/https://cdn.doordash.com/managed/consumer/seo/home/landing_cta/download_the_app_desktop.png" atl="#" />
