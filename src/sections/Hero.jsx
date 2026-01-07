@@ -1,4 +1,4 @@
-import { Card } from "@/components/Card";
+import { HeroCard } from "@/components/HeroCard";
 import { ArrowRight, MapPin, User } from "lucide-react";
 import { Button } from "@/components/Button";
 
@@ -58,7 +58,7 @@ export const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-6 pt-15 pb-30 relative z-10">
         <div className="grid sm:grid-cols-1 lg:grid-cols-3 place-items-center gap-8 px-4 py-10">
-          <Card
+          <HeroCard
             img="https://cdn.doordash.com/media/consumer/home/landing/new/ScootScoot.svg"
             header="Become a Dasher"
             content="As a delivery driver, make money and work on your schedule. Sign up in minutes."
@@ -67,9 +67,9 @@ export const Hero = () => {
             variant="hero"
           >
             <ArrowRight className="w-5 h-5" />
-          </Card>
+          </HeroCard>
 
-          <Card
+          <HeroCard
             img="https://cdn.doordash.com/media/consumer/home/landing/new/Storefront.svg"
             header="Become a Merchant"
             content="Attract new customers and grow sales, starting with 0% commissions for up to 30 days."
@@ -78,9 +78,9 @@ export const Hero = () => {
             variant="hero"
           >
             <ArrowRight className="w-5 h-5" />
-          </Card>
+          </HeroCard>
 
-          <Card
+          <HeroCard
             img="https://cdn.doordash.com/media/consumer/home/landing/new/iphone.svg"
             header="Get the best DoorDash experience"
             content="Experience the best your neighborhood has to offer, all in one app."
@@ -89,7 +89,7 @@ export const Hero = () => {
             variant="hero"
           >
             <ArrowRight className="w-5 h-5" />
-          </Card>
+          </HeroCard>
         </div>
       </div>
     </main>

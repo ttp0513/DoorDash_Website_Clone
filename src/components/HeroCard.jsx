@@ -1,14 +1,9 @@
 import { Button } from "@/components/Button";
 
-const size = {
-    default: "text-3xl",
-    lg: "text-4xl"
-}
-
-export const Card = ({img, header, content, cta, link, children, wd, fontSize="default", variant }) => {
+export const HeroCard = ({img, header, content, cta, link, children, variant }) => {
 
     return (
-        <div className={`flex flex-col items-center ${wd || "w-[239px]"} flex-wrap text-center min-h-[400px]`}>
+        <div className={`flex flex-col items-center w-[239px] flex-wrap text-center min-h-[400px]`}>
                 {img && (
                 <div>
                     <img
@@ -19,7 +14,7 @@ export const Card = ({img, header, content, cta, link, children, wd, fontSize="d
                 </div>
                 )}
 
-            <div className={`font-bold ${size[fontSize]}`}>{header}</div>
+            <div className="text-3xl font-bold ">{header}</div>
             <p className="text-base font-medium py-3">{content}</p>
             
             <div>
