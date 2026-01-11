@@ -1,36 +1,39 @@
 import { Button } from "@/components/Button";
-const textPos = {
+
+const position = {
   left: "text-left",
   default: "text-center",
-  right: "text-right",
-};
+}
 
-export const BodyCard = ({
+export const Card = ({
   img,
   header,
   subheader,
   content,
-  cta,
   textPosition = "default",
+  cta,
   link,
   warning,
 }) => {
 
   return (
-    <div className={`flex flex-col h-full items-center ${textPos[textPosition]} overflow-hidden`}>
+    
+    <div className={`flex flex-col h-full items-${textPosition === "left" ? "start" : "center"} ${position[textPosition]} overflow-hidden`}>
 
        {/* Media: Video ratio (16/9) on mobile, Square (1/1) on large screens */}
+      {img && (
       <div className="w-full relative aspect-video lg:aspect-square overflow-hidden bg-gray-100">
+
               <img 
                 src={img} 
                 alt={header} 
                 className="absolute inset-0 w-full h-full object-cover" 
               />
-      </div>
+      </div>)}
 
       {/* Text content */}
       <div className="space-y-4 py-4 w-[90%]">
-        <h1 className=" text-2xl sm:text-4xl font-bold text-headline  ">{header}</h1>
+        <h1 className=" text-2xl sm:text-4xl font-bold text-headline">{header}</h1>
 
         {subheader && (
           <h3 className="text-lg font-semibold text-headline  ">{subheader}</h3>
@@ -41,14 +44,14 @@ export const BodyCard = ({
       </div>
 
       {/* CTA + Warning */}
-      
-        <div>
-            <Button link={link}>
-                {cta}
-            </Button>
-        </div> 
-        
-        <div className="py-4">
+      <div>
+        <Button 
+        link={link}
+        >{cta}</Button>
+      </div>
+
+
+      <div className="py-4">
         {warning && (
             <p className="text-xs font-medium text-headline ">
             {warning}

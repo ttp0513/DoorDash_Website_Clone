@@ -56,7 +56,7 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-6 pt-15 pb-30 relative z-10">
+      <div className="container mx-auto px-6 pt-15 mb-10 relative z-10">
         <div className="grid sm:grid-cols-1 lg:grid-cols-3 place-items-center gap-8 px-4 py-10">
           <HeroCard
             img="https://cdn.doordash.com/media/consumer/home/landing/new/ScootScoot.svg"
