@@ -1,7 +1,10 @@
 const footerLinks = {
   popularCategories: [
     { label: "Alcohol Australia", link: "/alcohol-australia" },
-    { label: "Alcohol Delivery Australia", link: "/alcohol-delivery-australia" },
+    {
+      label: "Alcohol Delivery Australia",
+      link: "/alcohol-delivery-australia",
+    },
     { label: "Aldi Australia", link: "/aldi-australia" },
     { label: "Battle Of The Brands", link: "/battle-of-the-brands" },
     { label: "Beauty Stores", link: "/beauty-stores" },
@@ -17,7 +20,10 @@ const footerLinks = {
     { label: "Flower Delivery", link: "/flower-delivery" },
     { label: "Game Day", link: "/game-day" },
     { label: "Grocery Delivery Canada", link: "/grocery-delivery-canada" },
-    { label: "Grocery Retail Convenience", link: "/grocery-retail-convenience" },
+    {
+      label: "Grocery Retail Convenience",
+      link: "/grocery-retail-convenience",
+    },
     { label: "Haleon Well Within Reach", link: "/haleon-well-within-reach" },
     { label: "Halloween", link: "/halloween" },
     { label: "Holiday Hosting", link: "/holiday-hosting" },
@@ -52,7 +58,10 @@ const footerLinks = {
     { label: "Promotions", link: "/promotions" },
     { label: "Dasher Central", link: "/dasher-central" },
     { label: "LinkedIn", link: "https://www.linkedin.com/company/doordash" },
-    { label: "Glassdoor", link: "https://www.glassdoor.com/Overview/Working-at-DoorDash-EI_IE813073.11,19.htm" },
+    {
+      label: "Glassdoor",
+      link: "https://www.glassdoor.com/Overview/Working-at-DoorDash-EI_IE813073.11,19.htm",
+    },
     { label: "Accessibility", link: "/accessibility" },
     { label: "Newsroom", link: "/newsroom" },
   ],
@@ -68,43 +77,98 @@ const footerLinks = {
     { label: "Get DoorDash for Business", link: "/business" },
   ],
   appDownloads: [
-    { label: "Available on the App Store", link: "https://apps.apple.com/app/id719972451" },
-    { label: "Android App on Google Play", link: "https://play.google.com/store/apps/details?id=com.dd.doordash" },
+    {
+      label: "Available on the App Store",
+      link: "https://apps.apple.com/app/id719972451",
+    },
+    {
+      label: "Android App on Google Play",
+      link: "https://play.google.com/store/apps/details?id=com.dd.doordash",
+    },
   ],
   others: [
-    {label: "Terms of Service", link:""},
-    {label: "Privacy", link: ""},
-    {label: "Delivery Locations", link:""},
-    {label: "Do not Sell or Share My Personal Information", link:""}
+    { label: "Terms of Service", link: "" },
+    { label: "Privacy", link: "" },
+    { label: "Delivery Locations", link: "" },
+    { label: "Do not Sell or Share My Personal Information", link: "" },
   ],
-  social: [
-    {label: "Facebook", link: ""}
-  ]
+  social: [{ label: "Facebook", link: "" }],
 };
 
-
 export const Footer = () => {
-    return (
-        <footer>
-            <div className="py-2 bg-footer w-full">
-                <div className="container mx-auto relative overflow-hidden px-2">
-                    <h1 className="font-semibold text-white py-6">Popular Categories</h1>
-                    <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-rows-10 gap-3">
-                        
-                        {footerLinks.popularCategories.map((item, index) => (
-                            <p key={index} className="text-white/80 text-sm space-y-6">
-                                <a className="hover:text-white hover:underline" href={item.link} > 
-                                     {item.label}
-                                </a>
-                               
-                            </p>
-                        )
-                        )}
-                    </div>
+  return (
+    <footer>
+      <div className="bg-footer w-full ">
+        <div className="container mx-auto relative overflow-hidden text-center lg:text-left lg:px-20">
+          <h1 className="font-semibold text-white mt-6 mb-3">
+            Popular Categories
+          </h1>
+          <div className="grid grid-cols-1  md:grid-cols-4 lg:grid-rows-10 gap-2">
+            {footerLinks.popularCategories.map((item, index) => (
+              <p key={index} className="text-white/80 text-[14px] space-y-4">
+                <a
+                  className="hover:text-white hover:underline"
+                  href={item.link}
+                >
+                  {item.label}
+                </a>
+              </p>
+            ))}
+          </div>
+        </div>
 
-                </div>
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-6 gap-3 lg:px-20">
+          <div className="text-center lg:text-left space-y-3 overflow-hidden">
+            <h1 className="font-semibold text-white mt-16 mb-3">
+              Get to know us
+            </h1>
+            {footerLinks.getToKnowUs.map((item, index) => (
+              <p key={index} className="text-white/80 text-xs space-y-4">
+                <a
+                  className="hover:text-white hover:underline"
+                  href={item.link}
+                >
+                  {item.label}
+                </a>
+              </p>
+            ))}
+          </div>
 
-            </div>
-            
-        </footer>) ;
-}
+          <div className="text-center lg:text-left space-y-3 overflow-hidden">
+            <h1 className="font-semibold text-white mt-16 mb-3">
+              Let us help you
+            </h1>
+            {footerLinks.letUsHelpYou.map((item, index) => (
+              <p key={index} className="text-white/80 text-xs space-y-4">
+                <a
+                  className="hover:text-white hover:underline"
+                  href={item.link}
+                >
+                  {item.label}
+                </a>
+              </p>
+            ))}
+          </div>
+          
+          
+          <div className="text-center lg:text-left space-y-3 overflow-hidden">
+            <h1 className="font-semibold text-white mt-16 mb-3">
+              Doing Business
+            </h1>
+            {footerLinks.doingBusiness.map((item, index) => (
+              <p key={index} className="text-white/80 text-xs space-y-4">
+                <a
+                  className="hover:text-white hover:underline"
+                  href={item.link}
+                >
+                  {item.label}
+                </a>
+              </p>
+            ))}
+          </div>
+
+        </div>
+      </div>
+    </footer>
+  );
+};

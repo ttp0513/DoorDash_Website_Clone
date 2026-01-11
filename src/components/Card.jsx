@@ -5,6 +5,10 @@ const position = {
   default: "text-center",
 }
 
+const color = {
+  default: "text-headline",
+  white: "text-white"
+}
 export const Card = ({
   img,
   header,
@@ -14,6 +18,7 @@ export const Card = ({
   cta,
   link,
   warning,
+  textColor = "default"
 }) => {
 
   return (
@@ -32,13 +37,14 @@ export const Card = ({
       </div>)}
 
       {/* Text content */}
+
       <div className="space-y-4 py-4 w-[90%]">
-        <h1 className=" text-2xl sm:text-4xl font-bold text-headline">{header}</h1>
+        <h1 className={` text-2xl sm:text-4xl font-bold ${color[textColor]}`}>{header}</h1>
 
         {subheader && (
-          <h3 className="text-lg font-semibold text-headline  ">{subheader}</h3>
+          <h3 className={`text-lg font-semibold ${color[textColor]}`}>{subheader}</h3>
         )}
-        <p className="font-medium text-sm sm:text-l md:text-[16px] text-headline ">
+        <p className={`font-medium text-sm sm:text-l md:text-[16px] ${color[textColor]}`}>
           {content}
         </p>
       </div>
