@@ -1,3 +1,5 @@
+import { Copyright } from 'lucide-react';
+
 const footerLinks = {
   popularCategories: [
     { label: "Alcohol Australia", link: "/alcohol-australia" },
@@ -76,16 +78,7 @@ const footerLinks = {
     { label: "Get Dashers for Deliveries", link: "/get-dashers" },
     { label: "Get DoorDash for Business", link: "/business" },
   ],
-  appDownloads: [
-    {
-      label: "Available on the App Store",
-      link: "https://apps.apple.com/app/id719972451",
-    },
-    {
-      label: "Android App on Google Play",
-      link: "https://play.google.com/store/apps/details?id=com.dd.doordash",
-    },
-  ],
+
   others: [
     { label: "Terms of Service", link: "" },
     { label: "Privacy", link: "" },
@@ -105,9 +98,8 @@ export const Footer = () => {
           </h1>
           <div className="grid grid-cols-1  md:grid-cols-4 lg:grid-rows-10 gap-2">
             {footerLinks.popularCategories.map((item, index) => (
-              <p key={index} className="text-white/80 text-[14px] space-y-4">
+              <p key={index} className="text-white/80  text-[14px] text-white/80 text-[14px] hover:text-white hover:underline">
                 <a
-                  className="hover:text-white hover:underline"
                   href={item.link}
                 >
                   {item.label}
@@ -117,15 +109,14 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-6 gap-3 lg:px-20">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-3 lg:px-20">
           <div className="text-center lg:text-left space-y-3 overflow-hidden">
-            <h1 className="font-semibold text-white mt-16 mb-3">
+            <h1 className="font-semibold text-white mt-10 mb-3">
               Get to know us
             </h1>
             {footerLinks.getToKnowUs.map((item, index) => (
-              <p key={index} className="text-white/80 text-xs space-y-4">
+              <p key={index} className="text-white/80  text-[14px] text-white/80 text-[14px] hover:text-white hover:underline">
                 <a
-                  className="hover:text-white hover:underline"
                   href={item.link}
                 >
                   {item.label}
@@ -135,13 +126,12 @@ export const Footer = () => {
           </div>
 
           <div className="text-center lg:text-left space-y-3 overflow-hidden">
-            <h1 className="font-semibold text-white mt-16 mb-3">
+            <h1 className="font-semibold text-white mt-10 mb-3">
               Let us help you
             </h1>
             {footerLinks.letUsHelpYou.map((item, index) => (
-              <p key={index} className="text-white/80 text-xs space-y-4">
+              <p key={index} className="text-white/80  text-[14px] text-white/80 text-[14px] hover:text-white hover:underline">
                 <a
-                  className="hover:text-white hover:underline"
                   href={item.link}
                 >
                   {item.label}
@@ -152,13 +142,12 @@ export const Footer = () => {
           
           
           <div className="text-center lg:text-left space-y-3 overflow-hidden">
-            <h1 className="font-semibold text-white mt-16 mb-3">
+            <h1 className="font-semibold text-white mt-10 mb-3">
               Doing Business
             </h1>
             {footerLinks.doingBusiness.map((item, index) => (
-              <p key={index} className="text-white/80 text-xs space-y-4">
+              <p key={index} className="text-white/80 text-[14px] text-white/80 text-[14px] hover:text-white hover:underline">
                 <a
-                  className="hover:text-white hover:underline"
                   href={item.link}
                 >
                   {item.label}
@@ -166,8 +155,35 @@ export const Footer = () => {
               </p>
             ))}
           </div>
-
+          <div></div>
+          <div></div>
         </div>
+
+        
+      <div className="container mx-auto lg:px-20">
+      <div className="flex gap-10 py-10 items-center">
+
+          <div className="w-14">
+          <img src="/DoorDash-Logo-Gray.png" className="object-contain w-full h-full" />
+          </div>
+
+          {footerLinks.others.map((item, index) => (
+              <p key={index} className="text-white/80 text-xs hover:text-white hover:underline">
+                <a
+                  href={item.link}
+                >
+                  {item.label}
+                </a>
+              </p>
+            ))}
+          <div className="flex w-auto text-center">
+          <p className="text-white/80 text-xs flex">
+          <span><Copyright className="h-[14px]"/></span>
+          2026 Door Dash
+          </p>
+          </div>
+      </div>
+      </div>
       </div>
     </footer>
   );

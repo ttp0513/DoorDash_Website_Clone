@@ -17,7 +17,7 @@ export const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 right-0 left-0 z-20 transition-all duration-200 ${isScrolled ? "bg-white backdrop-blur border-none" : "bg-transparent px-3 py-2"}`}>
-      <div className="max-w-content mx-auto flex items-center justify-between px-3 py-2">
+      <div className="mx-auto flex items-center justify-between px-3 py-2">
             
             <div className="w-40">
               <img className= {`${isScrolled ? "object-contain w-auto h-full" : "hidden"}`} src="DoorDash-Logo.png" alt="DoorDash-Logo"/> 

@@ -3,6 +3,8 @@ import { Card } from "@/components/Card";
 export const Body = () => {
   return (
     <section id="body">
+
+    {/* Consumer Promo */}
       <div className="relative">
         {/* First Promo */}
         <div className="container mx-auto flex flex-col md:flex-row lg:gap-10 items-center bg-body-background lg:bg-transparent lg:relative z-10">
@@ -13,7 +15,7 @@ export const Body = () => {
             />
           </div>
 
-          <div className="w-full lg:w-[40%] flex order-2 md:order-1 px-10 lg:ml-20">
+          <div className="w-full lg:w-[40%] flex order-2 md:order-1 px-10 ">
             <Card
               header="Everything you crave, delivered."
               content="Get a slice of pizza or the whole pie delivered, or pick up house lo mein from the Chinese takeout spot you've been meaning to try."
@@ -35,7 +37,7 @@ export const Body = () => {
               />
             </div>
 
-            <div className="w-full lg:w-[40%] flex order-2 md:order-2 px-10 lg:px-20">
+            <div className="w-full lg:w-[40%] flex order-2 md:order-2 px-10">
               <Card
                 header="DashPass is delivery for less"
                 content="Members get a $0 delivery fee on DashPass orders, 5% back on pickup orders, and so much more. Plus, it's free for 30 days."
@@ -49,12 +51,12 @@ export const Body = () => {
 
         {/* 3rd Promo */}
         <div className="relative">
-           {/* Background image */}
+          {/* Background image */}
           <img
-            src="https://cdn.andnowuknow.com/mainStoryImage/postmatesdoordash_grocery_100119.jpg?VersionId=GpYujR493egQ3hvunBh7J6qBGHEzz752"
-            className="absolute inset-0 w-full h-full object-cover"
+            src="/Grocery-background.png"
+            className="absolute inset-0 w-full h-full object-stretch"
           />
-           {/* Background Dark layout */}
+          {/* Background Dark layout */}
           <div className="absolute inset-0 bg-black/50"></div>
 
           {/* Content */}
@@ -74,7 +76,7 @@ export const Body = () => {
         </div>
 
         {/* 4th Promo */}
-        
+
         <div className="container mx-auto flex flex-col md:flex-row lg:gap-10 py-10 items-center bg-transparent lg:relative z-10">
           <div className="order-1 md:order-2 ">
             <img
@@ -83,7 +85,7 @@ export const Body = () => {
             />
           </div>
 
-          <div className="w-full lg:w-[40%] flex order-2 md:order-1 px-10 lg:px-20">
+          <div className="w-full lg:w-[40%] flex order-2 md:order-1 px-10">
             <Card
               header="Convenience stores at your doorstep"
               content="Stock up on snacks, household essentials, candy, or vitamins — all delivered in under an hour."
@@ -142,6 +144,66 @@ export const Body = () => {
           </div>
         </div>
       </div>
+
+      {/* Partnership Promo */}
+      <div className="container mx-auto relative overflow-hidden ">
+        <div className="container mx-auto lg:w-[40%]">
+          <h1 className="py-8 lg:py-16 text-2xl md:text-3xl font-bold text-headline text-center">
+            Unlocking opportunity for Dashers and businesses
+          </h1>
+        </div>
+      </div>
+
+       {/*  Promo */}
+      <div className="relative">
+        {/* Unlock 1st Promo */}
+        <div className="container mx-auto flex flex-col md:flex-row lg:gap-10 items-center bg-body-background lg:bg-transparent lg:relative z-10">
+          <div className="order-1 md:order-2 ">
+            <img
+              className="w-full h-auto object-cover lg:relative z-10 lg:-mb-10 md:-mb-5"
+              src="https://img.cdn4dd.com/cdn-cgi/image/fit=cover,format=auto,quality=60/https://cdn.doordash.com/managed/consumer/seo/home/landing_cta/become_a_dasher_desktop.png"
+            />
+          </div>
+
+          <div className="w-full lg:w-[40%] flex order-2 md:order-1 px-10 ">
+            <Card
+              header="Sign up to dash and get paid"
+              content="Deliver with the #1 Food and Drink App in the U.S. As a delivery driver, you'll make money and work on your schedule. Sign up in minutes."
+              subheader="Your favorite local restaurants"
+              cta="Become a Dasher"
+              link="https://dasher.doordash.com/en-us/"
+              textPosition="left"
+            ></Card>
+          </div>
+        </div>
+
+        {/* Unlock 2nd Promo */}
+        <div className="bg-body-background">
+          <div className="relative container mx-auto flex flex-col md:flex-row items-center lg:py-22 bg-body-background z-0 ">
+            <div className="order-1 md:order-1">
+              <img
+                className="w-full h-auto object-cover"
+                src="https://img.cdn4dd.com/cdn-cgi/image/fit=cover,format=auto,quality=60/https://cdn.doordash.com/managed/consumer/seo/home/landing_cta/work_with_doordash_desktop.png"
+              />
+            </div>
+
+            <div className="w-full lg:w-[40%] flex order-2 md:order-2 px-10">
+              <Card
+                header="Grow your business with DoorDash"
+                content="Businesses large and small partner with DoorDash to reach new customers, increase order volume, and drive more sales."
+                cta="Become a Partner"
+                link="https://get.doordash.com/en-us/"
+                textPosition="left"
+              ></Card>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Food-Cusines-Chains Selection */}
+
+
+
     </section>
   );
 };
