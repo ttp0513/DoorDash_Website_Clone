@@ -3,8 +3,8 @@ export const SelectionCard = ({label, isActive, onClick}) => {
          <button
             onClick = {onClick} 
             className= {`
-                py-2 text-l font-semibold border-b-3
-                ${ isActive ? "border-headline text-headline bg-secondary-muted" : "border-transparent text-muted hover:bg-secondary-muted" }`} 
+                py-2 text-l font-bold border-b-3 hover:bg-secondary-muted
+                ${ isActive ? "border-headline text-headline " : "border-transparent text-muted" }`} 
         >
            {label}
         </button>
