@@ -5,20 +5,18 @@ import { Footer } from "./sections/Footer";
 import { Body } from "./sections/Body";
 import { Selection } from "./sections/Selection";
 
-
 function App() {
-
   return (
-    <div>
-    
-    <Navbar />
-    <main>
-      <Hero />
-      <Body />
-      <Selection />
-      <Footer />
-    </main>
-    </div>
+        <div>
+        
+        <Navbar />
+        <main>
+          <Hero />
+          <Body />
+          <Selection />
+          <Footer />
+        </main>
+        </div>
   )
 }
 
